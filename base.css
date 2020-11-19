@@ -1,0 +1,119 @@
+html{
+  background: radial-gradient(#f66465, #1494a5);
+}
+header{
+  font-size: 80px;
+  font-weight: bold;
+  margin: 5% 40% 10% 40%;
+  text-align: center;
+  color: orange;
+  text-shadow: 2px 2px #ff0000;
+}
+a{
+  border-style: inset;
+  border-color:	#FFDF00;
+  border-width: 20px;
+  border-radius: 50%;
+  color: 	#FF69B4;
+  text-decoration: none;
+  font-size: 20px;
+  background-color: black;
+}
+.Homepageboxes{
+  margin: 10% 40% 10% 40%;
+  text-align: center;
+}
+.loginbox{
+  margin: 10% 40% 10% 40%;
+}
+
+.normalbox{
+  font-size: 20px;
+  color: pink;
+  background-color: purple;
+  display:inline-block;
+}
+.inputbox{
+border-radius: 20%;
+background-color: pink;
+display: inline-block;
+}
+.logininputbox{
+  margin-bottom: 10%;
+  font-size: 20px;
+}
+
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 20px;
+  font-size: 20px;
+  border: none;
+  display: table-cell;
+}
+
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #006400;
+  min-width: 160px;
+  box-shadow: 0px 16px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content button{
+  background-color: pink;
+}
+.dropdownbtn :hover{
+
+}
+.dropdown-content a:hover
+{background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+display: inline;
+}
+
+
+.dropdown:hover .dropbtn{
+  background-color: #3e8e41;
+}
+.eachinput{
+  display: table-cell;
+  padding: 10px;
+}
+.Patientonly{
+  margin-top: 5%;
+  margin-bottom: 2%;
+}
+.loginmovement{
+  margin: 2%;
+}
+.addnewemployee{
+  margin-bottom: 2%;
+}
+.searchbox{
+  border-radius: 40%;
+  background-color: gray;
+  color: yellow;
+}
+.dailybox{
+  font-size: 25px;
+  color: #32CD32;
+}
+.employeelist{
+  color: maroon;
+}
