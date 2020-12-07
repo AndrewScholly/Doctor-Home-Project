@@ -15,7 +15,6 @@ CREATE TABLE users(
   Family_code int,
   Emergency_contact int(10),
   Relation_to_contact varchar,
-  accesslevel varchar NOT NULL,
   salary bigint
 );
 
@@ -42,4 +41,17 @@ CREATE TABLE caregiver(
 CREATE table payment(
   total_due bigint,
   new_payment bigint
+)
+CREATE TABLE new(
+  Role2 varchar NOT NULL,
+  Fname2 varchar(10) NOT NULL,
+  Lname2 varchar(10) NOT NULL,
+  Email_id2 bigint NOT NULL,
+  Phone2 int(10)NOT NULL,
+  Password2 bytea NOT NULL,
+  Date_of_birth2 int(10) NOT NULL,
+  Family_code2 int,
+  Emergency_contact2 int(10),
+  Relation_to_contact2 varchar,
+  salary2 bigint
 )
