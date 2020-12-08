@@ -1,7 +1,7 @@
 <?php
 include base.php
 
-if ($_REQUEST.method == 'POST2'){
+if ($_SERVER['REQUEST_METHOD'] === 'POST'){
   $Role = $_REQUEST.input['role2']
   $Fname = $_REQUEST.input['Fname2']
   $Lname = $_REQUEST.input['Lname2']
