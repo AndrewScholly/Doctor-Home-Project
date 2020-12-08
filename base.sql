@@ -27,7 +27,9 @@ CREATE TABLE patient(
   breakfast varchar(20),
   lunch varchar(20),
   dinner varchar(20),
-  missed_activity varchar(20)
+  missed_activity varchar(20),
+  Group varchar(20),
+  Admission_date varchar(20)
 );
 CREATE TABLE doctor(
   d_name varchar(10),

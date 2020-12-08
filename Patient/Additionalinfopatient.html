@@ -13,7 +13,7 @@
       Patient ID
     </p>
     <input type="text" name="Patient ID">
-    <p class="normalbox">
+    <p name="group" class="normalbox">
       Group
     </p>
     <input type="text" name="Group">
@@ -21,8 +21,8 @@
       Admission Date
     </p>
     <input type="text" name="Admission Date">
-    <p class="normalbox">
-      Patient Name
+    <p name="pname" class="normalbox">
+      {{ patient['name'] }}
     </p>
     <p class="PatientIDname"></p>
     <a href="Adminreport.html" class="loginmovement">Ok</a>
