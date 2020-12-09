@@ -9,43 +9,32 @@
     <header>
       Home
     </header>
+
     <div class="Patientinfo">
-      <p class="dailybox">
-        Name
-      </p>
-      <p></p>
-      <p class="inputbox"></p>
-      <p class="dailybox">
-        Date
-      </p>
-      <p></p>
-      <p class="inputbox"></p>
-      <p class="dailybox">
-        Comment
-      </p>
-      <p></p>
-      <p class="inputbox"></p>
-      <p class="dailybox">
-        Morning Med
-      </p>
-      <p></p>
-      <p class="inputbox"></p>
-      <p class="dailybox">
-        Afternoon Med
-      </p>
-      <p></p>
-      <p class="inputbox"></p>
-      <p class="dailybox">
-        Night Med
-      </p>
-      <p></p>
-      <p class="inputbox"></p>
-    </div>
-    <div class="Appoitments">
-      <p class="normalbox">
-        Appointments
-      </p>
-      <input type="text" name="Date" class="inputbox">
+      <table>
+        <tbody>
+          <tr>
+            <th class="dailybox">Name</th>
+            <th class="dailybox">Date</th>
+            <th class="dailybox">Comment</th>
+            <th class="dailybox">Morning Medicine</th>
+            <th class="dailybox">Afternoon Medicine</th>
+            <th class="dailybox">Night Medicine</th>
+            <th class="dailybox">Appointments</th>
+          </tr>
+        {% for patient in patient_information %}
+          <tr>
+         <td class="inputbox">{{ patient['name']}}</td>
+         <td class="inputbox">{{ patient['Date']}}</td>
+         <td class="inputbox">{{ patient['morning_med']}}</td>
+         <td class="inputbox">{{ patient['afternoon_med']}}</td>
+         <td class="inputbox">{{ patient['night_med']}}</td>
+         <td class="inputbox">{{ patient['d_appointment']}}</td>
+
+          </tr>
+       {% endfor %}
+       </tbody>
+      </table>
       <button type="button" class="loginmovement">Submit</button>
       <br>
       <a href="../Patient/Patientofdoctor.html">Patient</a>

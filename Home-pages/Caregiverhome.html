@@ -9,37 +9,32 @@
     <header>
       Home
     </header>
-    <p class="normalbox">List of Patients duty</p>
-    <div class="caretakerhelp">
-      <p class="dailybox">
-        Name
-      </p>
-      <p class="inputbox"></p>
-      <p class="dailybox">
-        Morning Medicine
-      </p>
-      <p class="inputbox"></p>
-      <p class="dailybox">
-        Afternoon Medicine
-      </p>
-      <p class="inputbox"></p>
-      <p class="dailybox">
-        Night Medicine
-      </p>
-      <p class="inputbox"></p>
-      <p class="dailybox">
-        Breakfast
-      </p>
-      <p class="inputbox"></p>
-      <p class="dailybox">
-        Lunch
-      </p>
-      <p class="inputbox"></p>
-      <p class="dailybox">
-        Dinner
-      </p>
-      <p class="inputbox"></p>
-    </div>
+    <table>
+      <tbody>
+        <tr>
+          <th class="dailybox">Name</th>
+          <th class="dailybox">Morning Medicine</th>
+          <th class="dailybox">Afternoon Medicine</th>
+          <th class="dailybox">Night Medicine</th>
+          <th class="dailybox">Breakfast</th>
+          <th class="dailybox">Lunch</th>
+          <th class="dailybox">Dinner</th>
+        </tr>
+      {% for patient in patient_information %}
+        <tr>
+       <td class="inputbox">{{ patient['name']}}</td>
+       <td class="inputbox">{{ patient['morning_med']}}</td>
+       <td class="inputbox">{{ patient['afternoon_med']}}</td>
+       <td class="inputbox">{{ patient['night_med']}}</td>
+       <td class="inputbox">{{ patient['breakfast']}}</td>
+       <td class="inputbox">{{ patient['lunch']}}</td>
+       <td class="inputbox">{{ patient['dinner']}}</td>
+
+        </tr>
+     {% endfor %}
+     </tbody>
+    </table>
+
     <a href="Caregiverhome.html" class="loginmovement">Ok</a>
     <a href="Caregiverhome.html" class="loginmovement">Cancel</a>
   </body>

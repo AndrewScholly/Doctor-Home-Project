@@ -8,10 +8,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST'){
   base.php.$mysqli->query("""SELECT name FROM patient WHERE pid == %s""",
   ($name));
 
-  base.php.$mysqli->query("""INSERT INTO patient(name, group, Admission_date)
-  values (%s, %s, %s)""",
-  ($pid, $group, $addate)); 
-  $mysqli->commit();
+  if (isset($_POST['yes'])){
+    base.php.$mysqli->query("""INSERT INTO patient(name, group, Admission_date)
+    values (%s, %s, %s)""",
+    ($pid, $group, $addate));
+    $mysqli->commit();
+  }
 }
 
  ?>

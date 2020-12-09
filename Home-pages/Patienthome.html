@@ -22,42 +22,36 @@
     </p>
     <p class="inputbox"></p>
     <div class="Dailyinformation">
-      <p class="dailybox">
-        Doctor's Name
-      </p>
-      <p class="inputbox"></p>
-      <p class="dailybox">
-        Doctor's Appointment
-      </p>
-      <p class="inputbox"></p>
-      <p class="dailybox">
-        Caregiver's Name
-      </p>
-      <p class="inputbox"></p>
-      <p class="dailybox">
-        Morning Medicine
-      </p>
-      <p class="inputbox"></p>
-      <p class="dailybox">
-        Afternoon Medicine
-      </p>
-      <p class="inputbox"></p>
-      <p class="normalbox">
-        Night Medicine
-      </p>
-      <p class="inputbox"></p>
-      <p class="dailybox">
-        Breakfast
-      </p>
-      <p class="inputbox"></p>
-      <p class="dailybox">
-        Lunch
-      </p>
-      <p class="inputbox"></p>
-      <p class="dailybox">
-        Dinner
-      </p>
-      <p class="inputbox"></p>
+      <table>
+        <tbody>
+          <tr>
+            <th class="dailybox">Doctor's Name</th>
+            <th class="dailybox">Doctor's Appointment</th>
+            <th class="dailybox">Caregiver's Name</th>
+            <th class="dailybox">Morning Medicine</th>
+            <th class="dailybox">Afternoon Medicine</th>
+            <th class="dailybox">Night Medicine</th>
+            <th class="dailybox">Breakfast</th>
+            <th class="dailybox">Lunch</th>
+            <th class="dailybox">Dinner</th>
+          </tr>
+        {% for patient in patient_information %}
+          <tr>
+         <td class="inputbox">{{ patient['d_name']}}</td>
+         <td class="inputbox">{{ patient['d_appointment']}}</td>
+         <td class="inputbox">{{ patient['Cname']}}</td>
+         <td class="inputbox">{{ patient['morning_med']}}</td>
+         <td class="inputbox">{{ patient['afternoon_med']}}</td>
+         <td class="inputbox">{{ patient['night_med']}}</td>
+         <td class="inputbox">{{ patient['breakfast']}}</td>
+         <td class="inputbox">{{ patient['lunch']}}</td>
+         <td class="inputbox">{{ patient['dinner']}}</td>
+
+          </tr>
+       {% endfor %}
+       </tbody>
+      </table>
+      
     </div>
   </body>
 </html>
