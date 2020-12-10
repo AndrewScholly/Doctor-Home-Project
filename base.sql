@@ -30,6 +30,7 @@ CREATE TABLE patient(
   missed_activity varchar(20),
   Group varchar(20),
   Admission_date varchar(20)
+  age bigint
 );
 CREATE TABLE doctor(
   d_name varchar(10),

@@ -10,27 +10,28 @@
       Employee
     </header>
     <div class="employeelist">
-      <p class="dailybox">
-        ID
-      </p>
-      <p class="inputbox"></p>
-      <input class="searchbox">Search for ID</input>
-      <p class="dailybox">
-        Name
-      </p>
-      <p class="inputbox"></p>
-      <input class="searchbox">Search for name</input>
-      <p class="dailybox">
-        Role
-      </p>
-      <p class="inputbox"></p>
-      <input class="searchbox">Search for Role</input>
-      <p class="dailybox">
-        Salary
-      </p>
-      <p class="inputbox"></p>
-      <input class="searchbox">Search for Salary</input>
-    </div>
+      <table>
+        <tbody>
+          <tr>
+            <th class="dailybox">ID</th>
+            <input class="inputbox">Search for ID</input>
+            <th class="dailybox">Name</th>
+            <input class="inputbox">Search for Name</input>
+            <th class="dailybox">Role</th>
+            <input class="inputbox">Search for Role</input>
+            <th class="dailybox">Salary</th>
+            <input class="inputbox">Search for Salary</input>
+          </tr>
+        {% for patient in patient_information %}
+          <tr>
+         <td class="dailybox">{{ employee['email_id']}}</td>
+         <td class="dailybox">{{ employee['Fname, Lname']}}</td>
+         <td class="dailybox">{{ employee['Role']}}</td>
+         <td class="dailybox">{{ employee['Salary']}}</td>
+          </tr>
+       {% endfor %}
+       </tbody>
+      </table>
     <div class="addnewemployee">
       <p class="normalbox">
         Emp ID

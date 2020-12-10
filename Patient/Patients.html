@@ -10,36 +10,35 @@
       Patients
     </header>
     <div class="Patientinfo">
-      <p class="dailybox">
-        ID
-      </p>
-      <p class="inputbox"></p>
-      <button type="button" name="button" class="searchbox">Search for ID</button>
-      <p class="dailybox">
-        Name
-      </p>
-      <p class="inputbox"></p>
-      <button type="button" name="button" class="searchbox">Search for Patient Name</button>
-      <p class="dailybox">
-        Age
-      </p>
-      <p class="inputbox"></p>
-      <button type="button" name="button" class="searchbox">Search for Age</button>
-      <p class="dailybox">
-        Emergency Contact
-      </p>
-      <p class="inputbox"></p>
-      <button type="button" name="button" class="searchbox">Search for Emergency Contact</button>
-      <p class="dailybox">
-        Emergency Contact Name
-      </p>
-      <p class="inputbox"></p>
-      <button type="button" name="button" class="searchbox">Search for Emergency Contact Name</button>
-      <p class="dailybox">
-        Admission Date
-      </p>
-      <p class="inputbox"></p>
-      <button type="button" name="button" class="searchbox">Search for Admission Date</button>
+      <table>
+        <tbody>
+          <tr>
+            <th class="dailybox">ID</th>
+            <input "searchbox">Search for ID</input>
+            <th class="dailybox">Name</th>
+            <input "searchbox">Search for Name</input>
+            <th class="dailybox">Age</th>
+            <input "searchbox">Search for Age</input>
+            <th class="dailybox">Emergency Contact</th>
+            <input "searchbox">Search for Emergency Contact</input>
+            <th class="dailybox">Emergency Contact Name</th>
+            <input "searchbox">Search for Emergency Contact Name</input>
+            <th class="dailybox">Admission date</th>
+            <input "searchbox">Search for Admission Date</input>
+          </tr>
+        {% for patient in patient_information %}
+          <tr>
+         <td class="inputbox">{{ patient['Email_id']}}</td>
+         <td class="inputbox">{{ patient['Fname, Lname']}}</td>
+         <td class="inputbox">{{ patient['age']}}</td>
+         <td class="inputbox">{{ patient['Emergency_contact']}}</td>
+         <td class="inputbox">{{ patient['Fname, Lname']}}</td>
+         <td class="inputbox">{{ patient['Admission_date']}}</td>
+
+          </tr>
+       {% endfor %}
+       </tbody>
+      </table>
     </div>
   </body>
 </html>
