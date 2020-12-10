@@ -10,29 +10,51 @@
       Patient
     </header>
     <div class="Patients">
-      <p class="dailybox">
-        Date
-      </p>
-      <p></p>
-      <p class="dailybox">
-        Comment
-      </p>
-      <p></p>
-      <p class="dailybox">
-        Morning Med
-      </p>
-      <p></p>
-      <p class="dailybox">
-        Afternoon Med
-      </p>
-      <p></p>
-      <p class="dailybox">
-        Night Med
-      </p>
-      <p></p>
+      <table>
+        <tbody>
+          <tr>
+            <th class="dailybox">Date</th>
+            <th class="dailybox">Comment</th>
+            <th class="dailybox">Caregiver's Name</th>
+            <th class="dailybox">Morning Medicine</th>
+            <th class="dailybox">Afternoon Medicine</th>
+            <th class="dailybox">Night Medicine</th>
+          </tr>
+        {% for patient in doctor_patient %}
+          <tr>
+         <td class="inputbox">{{ doctorpatient['date']}}</td>
+         <td class="inputbox">{{ doctorpatient['Comment']}}</td>
+         <td class="inputbox">{{ doctorpatient['morning_med']}}</td>
+         <td class="inputbox">{{ patient['afternoon_med']}}</td>
+         <td class="inputbox">{{ patient['night_med']}}</td>
+
+          </tr>
+       {% endfor %}
+       </tbody>
+      </table>
+      
     </div>
     <p class="normalbox">New Perscription</p>
     <div class="Newperscription">
+      <table>
+        <tbody>
+          <tr>
+            <th class="dailybox">Comment</th>
+            <th class="dailybox">Morning Medicine</th>
+            <th class="dailybox">Afternoon Medicine</th>
+            <th class="dailybox">Night Medicine</th>
+          </tr>
+        {% for patient in patient_information %}
+          <tr>
+         <td class="inputbox">{{ doctorpatient['Comment']}}</td>
+         <td class="inputbox">{{ doctorpatient['morning_med']}}</td>
+         <td class="inputbox">{{ doctorpatient['afternoon_med']}}</td>
+         <td class="inputbox">{{ doctorpatient['night_med']}}</td>
+
+          </tr>
+       {% endfor %}
+       </tbody>
+      </table>
       <p class="dailybox">
         Comment
       </p>
