@@ -15,56 +15,41 @@
     <input type="text" name="Date" class="inputbox">
     <div class="roster">
       <div class="titles">
-        <p class="dailybox">
-          Supervisor
-        </p>
-        <p class="dailybox">
-          Doctor
-        </p>
-        <p class="dailybox">
-          Caregiver1
-        </p>
-        <p class="dailybox">
-          Caregiver2
-        </p>
-        <p class="dailybox">
-          Caregiver3
-        </p>
-        <p class="dailybox">
-          Caregiver4
-        </p>
-      <div>
-      <div class="names">
-        <p class="dailybox">
-          Name
-        </p>
-        <p class="dailybox">
-          Name
-        </p>
-        <p class="dailybox">
-          Name
-        </p>
-        <p class="dailybox">
-          Name
-        </p>
-        <p class="dailybox">
-          Name
-        </p>
-      </div>
-      <div class="patientgroups">
-        <p class="dailybox">
-        </p>
-        <p class="dailybox">
-        </p>
-        <p class="dailybox">
-          Patient Group
-        </p>
-        <p class="dailybox">
-          Patient Group
-        </p>
-        <p class="dailybox">
-          Patient Group
-        </p>
+        <table>
+          <tbody>
+            <tr>
+              <th class="dailybox">Supervisor</th>
+              <th class="dailybox">Doctor</th>
+              <th class="dailybox">Caregiver1</th>
+              <th class="dailybox">Caregiver2</th>
+              <th class="dailybox">Caregiver3</th>
+              <th class="dailybox">Caregiver4</th>
+              <th class="dailybox">Breakfast</th>
+              <th class="dailybox">Lunch</th>
+              <th class="dailybox">Dinner</th>
+            </tr>
+
+            <tr class="names">
+           <td class="inputbox">{{ roster['Fname, Lname']}}</td>
+           <td class="inputbox">{{ Doctor['Fname, Lname']}}</td>
+           <td class="inputbox">{{ caregiver['Cname']}}</td>
+           <td class="inputbox">{{ caregiver['Cname']}}</td>
+           <td class="inputbox">{{ caregiver['Cname']}}</td>
+           <td class="inputbox">{{ caregiver['Cname']}}</td>
+
+            </tr>
+            <tr class="names">
+           <td class="inputbox"></td>
+           <td class="inputbox"></td>
+           <td class="inputbox">{{ pgroup['group']}}</td>
+           <td class="inputbox">{{ pgroup['group']}}</td>
+           <td class="inputbox">{{ pgroup['group']}}</td>
+           <td class="inputbox">{{ pgroup['group']}}</td>
+
+            </tr>
+         </tbody>
+        </table>
+        
       </div>
     </div>
   </body>
